@@ -1,34 +1,40 @@
-<!DOCTYPE html>
-<!--[if lt IE 7 ]> <html lang="en" class="ie6 ielt8"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="en" class="ie7 ielt8"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
-<head>
-<meta charset="utf-8">
-<title>Paper Stack</title>
-<link rel="stylesheet" type="text/css" href="style.css" />
-</head>
+<html>
+<head></head>
 <body>
-<div class="container">
-	<section id="content">
-		<form action="">
-			<h1>Login Form</h1>
-			<div>
-				<input type="text" placeholder="Username" required="" id="username" />
-			</div>
-			<div>
-				<input type="password" placeholder="Password" required="" id="password" />
-			</div>
-			<div>
-				<input type="submit" value="Log in" />
-				<a href="#">Lost your password?</a>
-				<a href="#">Register</a>
-			</div>
-		</form><!-- form -->
-		<div class="button">
-			<a href="#">Download source file</a>
-		</div><!-- button -->
-	</section><!-- content -->
-</div><!-- container -->
+<h3>Simple Calculator</h3>
+<br/>
+<form Name="calc">
+<table border=2>
+<tr>
+<td colspan=4><input name="display" onkeypress="return event.charCode >= 48 && event.charCode <= 57" type="text"></td>
+</tr>
+<tr>
+<td><input type=button value="0" OnClick="calc.display.value+='0'"></td>
+<td><input type=button value="1" OnClick="calc.display.value+='1'"></td>
+<td><input type=button value="2" OnClick="calc.display.value+='2'"></td>
+<td><input type=button value="+" OnClick="calc.display.value+='+'"></td>
+</tr>
+<tr>
+<td><input type=button value="3" OnClick="calc.display.value+='3'"></td>
+<td><input type=button value="4" OnClick="calc.display.value+='4'"></td>
+<td><input type=button value="5" OnClick="calc.display.value+='5'"></td>
+<td><input type=button value="-" OnClick="calc.display.value+='-'"></td>
+</tr>
+<tr>
+<td><input type=button value="6" OnClick="calc.display.value+='6'"></td>
+<td><input type=button value="7" OnClick="calc.display.value+='7'"></td>
+<td><input type=button value="8" OnClick="calc.display.value+='8'"></td>
+<td><input type=button value="x" OnClick="calc.display.value+='*'"></td>
+</tr>
+<tr>
+<td><input type=button value="9" OnClick="calc.display.value+='9'"></td>
+<td><input type=button value="C" OnClick="calc.display.value=''"></td>
+<td><input type=button value="=" OnClick="calc.display.value=eval(calc.display.value)"></td>
+<td><input type=button value="/" OnClick="calc.display.value+='/'"></td>
+</tr>
+</table>
+</form>
 </body>
 </html>
+
+
